@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Deepak Battini</Authors>
+    <Description>QuickGraph .NET standard.
+QuickGraph provides generic directed/undirected graph datastructures and algorithms for .Net.  QuickGraph comes with algorithms such as depth first seach, breath first search, A* search, shortest path, k-shortest path, maximum flow, minimum spanning tree, least common ancestors, etc...</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/deepakkumar1984/QuickGraph.NETStandard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/deepakkumar1984/QuickGraph.NETStandard</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>quickgraph, graphviz, nodegraph, directed graph, unidirected graph</PackageTags>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <FileVersion>3.8.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Glee\**" />
+    <EmbeddedResource Remove="Glee\**" />
+    <None Remove="Glee\**" />
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Algorithms\Search\HeightFirstSearchAlgorithm.cs" />
+    <Compile Remove="Algorithms\Search\UndirectedEdgeDepthFirstSearchAlgorithm.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Graphviz\" />
+  </ItemGroup>
+
+</Project>
