@@ -206,6 +206,7 @@ namespace QuickGraph.Graphviz
             Contract.Requires(!String.IsNullOrEmpty(outputFileName));
 
             var output = this.Generate();
+            
             return dot.Run(ImageType, Output.ToString(), outputFileName);
         }
 
